@@ -17,7 +17,7 @@ namespace Troco.Testes
             //Assert
             Assert.Equal(30, resultado);
         }
-        
+
         [Fact]
         public void Ao_comprar_50_centavos_e_pagar_1_o_troco_deve_ser_50_centavos()
         {
@@ -30,7 +30,7 @@ namespace Troco.Testes
             //Assert
             Assert.Equal(0.50m, resultado);
         }
-        
+
         [Fact]
         public void Ao_dar_100_reais_o_troco_deve_ser_1_cedula_de_100()
         {
@@ -58,7 +58,7 @@ namespace Troco.Testes
         }
 
         [Fact]
-        public void Ao_dar_133_e_75_centavos_o_troco_deve_ser_1_cedula_de_100_1_de_20_1_de_10_1_de_2_1_de_1_1_1_de_50centavos_e_1_25centavos ()
+        public void Ao_dar_133_e_75_centavos_o_troco_deve_ser_1_cedula_de_100_1_de_20_1_de_10_1_de_2_1_de_1_1_1_de_50centavos_e_1_25centavos()
         {
             //Arrange
             var troco = new TrocoStar();
@@ -68,6 +68,19 @@ namespace Troco.Testes
 
             //Assert
             Assert.Equal(new List<int> { 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0 }, resultado);
+        }
+
+        [Fact]
+        public void Ao_dar_67_e_15_centavos_o_troco_deve_ser_1_cedula_de_50_1_de_10_1_de_5_1_de_2_1_1_de_10_centavos_e_1_5centavos()
+        {
+            //Arrange
+            var troco = new TrocoStar();
+
+            //Action
+            var resultado = troco.CalcularCedulas(67.15m);
+
+            //Assert
+            Assert.Equal(new List<int> { 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1 }, resultado);
         }
     }
 }
