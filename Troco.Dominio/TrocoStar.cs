@@ -116,5 +116,57 @@
 
             return cedulas;
         }
+
+        public void ImprimirQntCedulas (List<int> Cedulas)
+        {
+            if (Cedulas[0] != 0)
+            {
+                Console.WriteLine(Cedulas[0] + " cedula de R$200,00");
+            }
+            if (Cedulas[1] != 0)
+            {
+                Console.WriteLine(Cedulas[1] + " cedula de R$100,00");
+            }
+            if (Cedulas[2] != 0)
+            {
+                Console.WriteLine(Cedulas[2] + " cedula de R$50,00");
+            }
+            if (Cedulas[3] != 0)
+            {
+                Console.WriteLine(Cedulas[3] + " cedula de R$20,00");
+            }
+            if (Cedulas[4] != 0)
+            {
+                Console.WriteLine(Cedulas[4] + " cedula de R$10,00");
+            }
+            if (Cedulas[5] != 0)
+            {
+                Console.WriteLine(Cedulas[5] + " cedula de R$5,00");
+            }
+            if (Cedulas[6] != 0)
+            {
+                Console.WriteLine(Cedulas[6] + " cedula de R$2,00");
+            }
+            if (Cedulas[7] != 0)
+            {
+                Console.WriteLine(Cedulas[7] + " moeda de R$1,00");
+            }
+            if (Cedulas[8] != 0)
+            {
+                Console.WriteLine(Cedulas[8] + " moeda de R$0,50");
+            }
+            if (Cedulas[9] != 0)
+            {
+                Console.WriteLine(Cedulas[9] + " moeda de R$0,25");
+            }
+            if (Cedulas[10] != 0)
+            {
+                Console.WriteLine(Cedulas[10] + " moeda de R$0,10");
+            }
+            if (Cedulas[11] != 0)
+            {
+                Console.WriteLine(Cedulas[11] + " moeda de R$0,05");
+            }
+        }
     }  
 }
